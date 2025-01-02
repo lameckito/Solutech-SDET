@@ -1,17 +1,50 @@
+# Setup Guide
 
+This guide provides installation instructions for setting up the Laravel application both via CLI and Docker.
+Steps:
+Clone the repository [https://github.com/Solutech-Limited/booking-challenge
+](https://github.com/Solutech-Limited/booking-challenge)
 
-## Setup on local machine
+## Installation via CLI
+### Preqest
+Composer
+P
+```
+# Install PHP dependencies
+composer install
 
-- Clone the repo
-- Run composer install
-- Run npm install
-- Rename env.example to .env
-- Fill in your database credentials
-- Run php artisan migrate
-- Run php artisan db:seed to seed an admin user and a few tours into the database
-- Run php artisan serve --port 80
-- Run npm run dev
-- Run tests by running php artisan test
-- Run php artisan scribe:generate to generate api documentation for your environment
-- Access the api documentation by visiting http://localhost/docs/index.html
-- Visit http://localhost to access the app
+# Install front-end dependencies
+npm install
+
+# Rename .env.example to .env
+cp .env.example .env
+
+# Set up database credentials in .env file
+
+# Run database migrations
+php artisan migrate
+
+# Seed the database with initial data
+php artisan db:seed
+
+# Serve the application on port 80
+php artisan serve --port 80
+
+# Compile front-end assets
+npm run dev
+
+# Run tests
+php artisan test
+
+# Generate API documentation
+php artisan scribe:generate
+
+# Access the API documentation at:
+# http://localhost/docs/index.html
+
+# Access the Laravel app at:
+# http://localhost
+```
+## Installation via Docker
+
+docker compose run php composer install
