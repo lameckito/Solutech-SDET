@@ -18,7 +18,7 @@ services:
             - DB_PORT=3306
             - DB_DATABASE=laravel
             - DB_USERNAME=root
-            - DB_PASSWORD=root
+            - DB_PASSWORD=secret@santa
         networks:
             - app-network
 
@@ -26,10 +26,10 @@ services:
         image: mysql:8.0
         container_name: mysql
         environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: laravel
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: secret@santa
+            MYSQL_DATABASE: booking
+            MYSQL_USER: solutech
+            MYSQL_PASSWORD: secret@santa
 #        volumes:
 #            - mysql-data:/var/lib/mysql  # Persist MySQL data between restarts
         ports:
