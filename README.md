@@ -8,6 +8,7 @@ This guide provides installation instructions for setting up the Laravel applica
    ](https://github.com/Solutech-Limited/booking-challenge)
 
 ## Installation via Docker
+This is the recommended development platform.
 
 ### Prerequisites
 
