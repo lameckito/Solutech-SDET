@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-	    server: {
+    server: {
         hmr: {
-            host: 0.0.0.0,
+            base: "0.0.0.0",
         },
         port: 3000,
         host: true,
@@ -19,7 +19,7 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: 0.0.0.0,
+                    base: "0.0.0.0",
                     includeAbsolute: false,
                 },
             },
