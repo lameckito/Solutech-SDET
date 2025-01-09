@@ -8,6 +8,7 @@ This guide provides installation instructions for setting up the Laravel applica
    ](https://github.com/Solutech-Limited/booking-challenge)
 
 ## Installation via Docker
+
 This is the recommended development platform.
 
 ### Prerequisites
@@ -32,15 +33,18 @@ Before running with Docker, ensure that the following dependencies are installed
     ```
 3. Build and start the containers:
     ```bash
-    ./build.sh   # Rebuilds container image
-    ./start.sh  # Starts containers in the background
+    ./build.sh
+     # Rebuilds container image
+    ./start.sh
+   # Starts containers in the background
     ```
-Fix for file permission issue when running on Linux or Mac
-```bash
-sudo chmod +x *.sh 
-sudo chmod +x setup/setup.sh
-```
 
+* Fix for file permission issue when running on Linux or Mac
+    ```bash
+  sudo chmod +x *.sh 
+  sudo chmod +x setup/setup.sh
+    ```
+* Sudo maybe required on Ubuntu to run the scripts
 
 4. Configure application container default setup and seed database:
    ```bash
@@ -52,23 +56,30 @@ sudo chmod +x setup/setup.sh
     ```
 6. Connect to application container via Terminal:
     ```bash
-    ./connect.sh  # Opens a terminal inside the container
+    ./connect.sh
+    # Opens a terminal inside the container
     ```
 
-### Services Exposed Outside Your Environment
+### External Services
 
-You can access your application and services via localhost. The services below are available to you:
+These are web services running exposed for access outside container:
 
-| Service               | Address (outside containers)            |
-|-----------------------|-----------------------------------------|
-| Webserver             | [localhost:8000](http://localhost:8000) |
-| Mailhog Web Interface | [localhost:8001](http://localhost:8001) |
-| PHPMyAdmin            | [localhost:8002](http://localhost:8002) |
+| Service    | Address (outside containers)            |
+|------------|-----------------------------------------|
+| Webserver  | [localhost:8000](http://localhost:8000) |
+| PHPMyAdmin | [localhost:8002](http://localhost:8002) |
+| Mailhog    | [localhost:8001](http://localhost:8001) |
 
-### Hosts Within Your Environment
+These credentials are provided as the initial setup for accessing the booking challange application.
 
-You'll need to configure your application to use any services you enabled. Below are the hostnames and ports for the
-services inside your environment:
+| **Username**      | **Password** |
+|:------------------|--------------|
+| admin@account.com | password     |
+
+### Internal Services
+
+Below are the hostnames and ports for the
+internal services running as containers:
 
 | Service        | Hostname | Port Number |
 |----------------|----------|-------------|
@@ -82,9 +93,13 @@ services inside your environment:
 As in all server environments, your application needs the correct file permissions to work properly. You can change the
 files throughout the container, so you won't care if the user exists or has the same ID on your host.
 
+* Fix for public file permission
+
 ```bash
 docker-compose exec booking-php-fpm chown -R www-data:www-data ./public
 ```
+
+* Fix for public file permission
 
 ## Installation via CLI
 
