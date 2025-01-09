@@ -48,7 +48,13 @@ php artisan --version
 #Setup DB
 php artisan migrate:fresh
 php artisan db:seed
+echo ""
 
+echo -e "${BLUE}======================  Fix Folder write permissions   ========================${RESET}"
+echo ""
+sudo chmod -R 755 /public
+sudo chmod -R 755 /bootstrap/cache
+sudo chmod -R 755 /storage
 
 
 echo -e "${BLUE}======================  Configuration Cleanup   ========================${RESET}"

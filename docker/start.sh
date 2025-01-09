@@ -19,11 +19,14 @@ echo ""
 echo -e "${BLUE}booking-app :${RESET} \t \t ${GREEN}     http://localhost:8000/      ${RESET}"
 echo -e "${BLUE}booking-mailhog :${RESET} \t ${GREEN}     http://localhost:8001/      ${RESET}"
 echo -e "${BLUE}booking-phpmyadmin :${RESET} \t ${GREEN}     http://localhost:8002/      ${RESET}"
+echo -e "${BLUE}================================ Login Credentials ==================================${RESET}"
+echo -e "${BLUE}URL:${RESET} \t \t ${GREEN}     http://localhost:8000/login      ${RESET}"
+echo -e "${BLUE}Username:${RESET} \t ${GREEN}     admin@account.com      ${RESET}"
+echo -e "${BLUE}Password:${RESET} \t ${GREEN}     password      ${RESET}"
 echo -e "${BLUE}======================================================================${RESET}"
 echo -e "Starting Docker Containers, confirm running service with ${YELLOW}'docker ps'  \n ${RESET}$now"
-echo -e "${YELLOW}Tip:${RESET} Error ${RED}'ContainerConfig'${RESET} occurs on updated configuration, restart/rebuild container to fix \n ${RESET}$now"
+echo -e "${YELLOW}Tip:${RESET} Error ${RED}'ContainerConfig'${RESET} occurs on updated configuration, run restart (stop.sh && start.sh) /rebuild (build.sh) container to fix \n ${RESET}$now"
 echo ""
-
 
 
 docker-compose up -d
