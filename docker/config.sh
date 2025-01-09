@@ -17,5 +17,6 @@ echo ""
 
 
 
-
+docker exec -it booking-php-fpm chmod +x /setup/setup.sh
+docker exec -it booking-php-fpm chmod +x /docker/*.sh
 docker exec -it booking-php-fpm /setup/setup.sh

@@ -35,6 +35,12 @@ Before running with Docker, ensure that the following dependencies are installed
     ./build.sh   # Rebuilds container image
     ./start.sh  # Starts containers in the background
     ```
+Fix for file permission issue when running on Linux or Mac
+```bash
+sudo chmod +x *.sh 
+sudo chmod +x setup/setup.sh
+```
+
 
 4. Configure application container default setup and seed database:
    ```bash
