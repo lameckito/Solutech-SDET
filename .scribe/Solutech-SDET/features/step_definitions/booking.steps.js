@@ -39,7 +39,7 @@ When('I fill in all required tour details', async () => {
   await page.fill('input[name="name"]', 'lameckito');
   await page.fill('input[name="slots"]', '2');
   await page.fill('input[name="price"]', '3000');
-  await page.fill('textarea[name="description"]', 'A romantic escape for couples.');
+  await page.fill('textarea[name="description"]', 'Enjoying the beach.');
   await page.click('button:has-text("Submit")');
 });
 
