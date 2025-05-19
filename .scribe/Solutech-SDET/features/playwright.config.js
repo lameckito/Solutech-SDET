@@ -6,6 +6,5 @@ export default defineConfig({
   use: {
     headless: false,
     baseURL: 'https://sdet.solutechlabs.com',
-    screenshot: 'only-on-failure',
   },
 });
