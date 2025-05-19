@@ -1,0 +1,11 @@
+{
+  "name": "solutech-sdet",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.2.2",
+    "playwright": "^1.44.0"
+  }
+}
